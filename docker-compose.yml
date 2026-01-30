@@ -1,0 +1,23 @@
+services:
+  nbs-api:
+    image: ghcr.io/urbreath/infiltration-api:v1
+    container_name: infiltration-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT:-minio-api-dev.urbreath.tech}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_BUCKET=${MINIO_BUCKET:-urbreath-public-repo}
+      - MINIO_BASE_PATH=${MINIO_BASE_PATH:-Leuven/infiltration-model/reports}
+    volumes:
+      - ./results:/app/results
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
