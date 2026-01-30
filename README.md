@@ -58,6 +58,11 @@ GET http://localhost:8000/health
 GET http://localhost:8000/presets
 ```
 
+### List Available NBS Options
+```
+GET http://localhost:8000/nbs_options
+```
+
 ### Run Analysis 
 #### Example 1
 ```
