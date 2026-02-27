@@ -76,68 +76,67 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
 
   ### Run Analysis 
   
-  #### Example 1
-  
-  ```
-  POST http://localhost:8000/analyze_polygon
-  Content-Type: application/json
-    
-    {
-      "polygon": [
-        [4.7005, 50.8798],
-        [4.7015, 50.8798],
-        [4.7015, 50.8808],
-        [4.7005, 50.8808],
-        [4.7005, 50.8798]
-      ],
-      "mode": "preset",
-      "weather": "Normal Spring Day"
-      "nbs_scenarios": [
-        "bioswale"
-    }```
+#### Example 1
+```
+POST http://localhost:8000/analyze_polygon
+Content-Type: application/json
 
-  #### Available Presets
-    - Normal Spring Day: Typical spring conditions with moderate rainfall
-    - Summer Storm: Heavy summer storm with intense rainfall
-    - Extreme Event: Extreme precipitation and saturated soils
-    - Winter Conditions: Cold winter rain with wet antecedent conditions
-    
-  #### Available NBS Scenarios
-    - Existing conditions ('existing_conditions')
-    - Rain gardens ('rain_garden')
-    - Bioswales ('bioswale')
-    - Permeable pavement ('permeable_pavement')
-    - Green roofs ('green_roof_extensive')
-    - Constructed wetlands ('constructed_wetland')
-    - Urban forests ('urban_forest')
-    - Infiltration trenches ('infitlration_trench')
-    
-    
-  #### Example 2
+{
+  "polygon": [
+    [4.7005, 50.8798],
+    [4.7015, 50.8798],
+    [4.7015, 50.8808],
+    [4.7005, 50.8808],
+    [4.7005, 50.8798]
+  ],
+  "mode": "preset",
+  "weather": "Normal Spring Day"
+  "nbs_scenarios": [
+    "bioswale"
+}
+```
+#### Available Presets
+- Normal Spring Day: Typical spring conditions with moderate rainfall
+- Summer Storm: Heavy summer storm with intense rainfall
+- Extreme Event: Extreme precipitation and saturated soils
+- Winter Conditions: Cold winter rain with wet antecedent conditions
 
-  ```
-  POST http://localhost:8000/analyze_polygon
-    Content-Type: application/json
-    
-    {
-      "polygon": [
-        [4.4250, 50.8000],
-        [4.4350, 50.8000],
-        [4.4350, 50.8050],
-        [4.4250, 50.8050],
-        [4.4250, 50.8000]
-      ],
-      "mode": "custom",
-      "weather": {
-        "temperature": 15.0,
-        "precipitation": 20.0,
-        "humidity": 75.0,
-        "antecedent_precip_7d": 20.0
-      },
-      "nbs_scenarios": [
-        "bioswale"
-      ]
-    }```
+#### Available NBS Scenarios
+- Existing conditions ('existing_conditions')
+- Rain gardens ('rain_garden')
+- Bioswales ('bioswale')
+- Permeable pavement ('permeable_pavement')
+- Green roofs ('green_roof_extensive')
+- Constructed wetlands ('constructed_wetland')
+- Urban forests ('urban_forest')
+- Infiltration trenches ('infitlration_trench')
+
+
+#### Example 2
+```
+POST http://localhost:8000/analyze_polygon
+Content-Type: application/json
+
+{
+  "polygon": [
+    [4.4250, 50.8000],
+    [4.4350, 50.8000],
+    [4.4350, 50.8050],
+    [4.4250, 50.8050],
+    [4.4250, 50.8000]
+  ],
+  "mode": "custom",
+  "weather": {
+    "temperature": 15.0,
+    "precipitation": 20.0,
+    "humidity": 75.0,
+    "antecedent_precip_7d": 20.0
+  },
+  "nbs_scenarios": [
+    "bioswale"
+  ]
+}
+```
     
   ### Output Files
   Results automatically uploaded to MinIO at:
