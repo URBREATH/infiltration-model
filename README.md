@@ -75,9 +75,10 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
   ## User Guide References
 
   ### Run Analysis 
+  
   #### Example 1
-  ```
-    POST http://localhost:8000/analyze_polygon
+  
+  ```POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
     
     {
@@ -111,8 +112,8 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
     
     
   #### Example 2
-  ```
-    POST http://localhost:8000/analyze_polygon
+
+  ```POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
     
     {
