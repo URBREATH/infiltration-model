@@ -78,8 +78,9 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
   
   #### Example 1
   
-  ```POST http://localhost:8000/analyze_polygon
-    Content-Type: application/json
+  ```
+  POST http://localhost:8000/analyze_polygon
+  Content-Type: application/json
     
     {
       "polygon": [
@@ -94,6 +95,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
       "nbs_scenarios": [
         "bioswale"
     }```
+
   #### Available Presets
     - Normal Spring Day: Typical spring conditions with moderate rainfall
     - Summer Storm: Heavy summer storm with intense rainfall
@@ -113,7 +115,8 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
     
   #### Example 2
 
-  ```POST http://localhost:8000/analyze_polygon
+  ```
+  POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
     
     {
