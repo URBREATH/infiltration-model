@@ -1,6 +1,6 @@
 services:
   nbs-api:
-    image: ghcr.io/urbreath/infiltration-api:v1
+    image: ghcr.io/urbreath/infiltration-api:v1.1
     container_name: infiltration-api
     ports:
       - "8000:8000"
