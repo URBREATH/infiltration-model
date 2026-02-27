@@ -76,7 +76,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
 
   ### Run Analysis 
   #### Example 1
-    ```bash
+  ```
     POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
     
@@ -92,8 +92,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
       "weather": "Normal Spring Day"
       "nbs_scenarios": [
         "bioswale"
-    }
-    ```
+    }```
   #### Available Presets
     - Normal Spring Day: Typical spring conditions with moderate rainfall
     - Summer Storm: Heavy summer storm with intense rainfall
@@ -112,7 +111,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
     
     
   #### Example 2
-    ```bash
+  ```
     POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
     
@@ -134,11 +133,8 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
       "nbs_scenarios": [
         "bioswale"
       ]
-    }
-    ```
+    }```
     
   ### Output Files
-    Results automatically uploaded to MinIO at:
-    ```
-    s3://urbreath-public-repo/Leuven/infiltration-model/reports/YYYYMMDD_HHMMSS/
-    ```
+  Results automatically uploaded to MinIO at:
+  ```s3://urbreath-public-repo/Leuven/infiltration-model/reports/YYYYMMDD_HHMMSS/```
