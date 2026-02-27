@@ -75,7 +75,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
   ## User Guide References
 
   ### Run Analysis 
-    #### Example 1
+  #### Example 1
     ```
     POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
@@ -94,13 +94,13 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
         "bioswale"
     }
     ```
-    #### Available Presets
+  #### Available Presets
     - Normal Spring Day: Typical spring conditions with moderate rainfall
     - Summer Storm: Heavy summer storm with intense rainfall
     - Extreme Event: Extreme precipitation and saturated soils
     - Winter Conditions: Cold winter rain with wet antecedent conditions
     
-    #### Available NBS Scenarios
+  #### Available NBS Scenarios
     - Existing conditions ('existing_conditions')
     - Rain gardens ('rain_garden')
     - Bioswales ('bioswale')
@@ -111,7 +111,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
     - Infiltration trenches ('infitlration_trench')
     
     
-    #### Example 2
+  #### Example 2
     ```
     POST http://localhost:8000/analyze_polygon
     Content-Type: application/json
@@ -137,7 +137,7 @@ API documentation: [here](https://lisboncouncil.sharepoint.com/sites/URBREATH/Ge
     }
     ```
     
-    ### Output Files
+  ### Output Files
     Results automatically uploaded to MinIO at:
     ```
     s3://urbreath-public-repo/Leuven/infiltration-model/reports/YYYYMMDD_HHMMSS/
