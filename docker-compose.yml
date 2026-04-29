@@ -11,7 +11,7 @@ services:
       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
       - MINIO_BUCKET=${MINIO_BUCKET:-urbreath-public-repo}
-      - MINIO_BASE_PATH=${MINIO_BASE_PATH:-Leuven/infiltration-model/reports}
+      # - MINIO_BASE_PATH=${MINIO_BASE_PATH:-Leuven/infiltration-model/reports}
     volumes:
       - ./results:/app/results
     restart: unless-stopped
