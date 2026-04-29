@@ -61,8 +61,8 @@ GET http://localhost:8000/nbs_options
 ## Built Image Registry
 
 - Registry URL: ```ghcr.io/urbreath```
-- Image Name:  ```ghcr.io/urbreath/infiltration-api:v1.1```
-- Version: ```v1.1```
+- Image Name:  ```ghcr.io/urbreath/infiltration-api:v2```
+- Version: ```v2```
 
 ## License
   
@@ -89,10 +89,12 @@ Content-Type: application/json
     [4.7005, 50.8808],
     [4.7005, 50.8798]
   ],
+  "city": "Leuven" 
   "mode": "preset",
   "weather": "Normal Spring Day"
-  "nbs_scenarios": [
-    "bioswale"
+  "nbs_weights": [
+    "bioswale": 30,
+    "existing_conditions":70
 }
 ```
 #### Available Presets
@@ -125,6 +127,7 @@ Content-Type: application/json
     [4.4250, 50.8050],
     [4.4250, 50.8000]
   ],
+  "city": "Cluj-Napoca"
   "mode": "custom",
   "weather": {
     "temperature": 15.0,
@@ -132,8 +135,9 @@ Content-Type: application/json
     "humidity": 75.0,
     "antecedent_precip_7d": 20.0
   },
-  "nbs_scenarios": [
-    "bioswale"
+  "nbs_weights": [
+    "bioswale":30,
+    "existing_conditions":70
   ]
 }
 ```
