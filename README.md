@@ -91,10 +91,11 @@ Content-Type: application/json
   ],
   "city": "Leuven" 
   "mode": "preset",
-  "weather": "Normal Spring Day"
-  "nbs_weights": [
+  "weather": "Normal Spring Day",
+  "nbs_weights": {
     "bioswale": 30,
     "existing_conditions":70
+}
 }
 ```
 #### Available Presets
@@ -135,10 +136,10 @@ Content-Type: application/json
     "humidity": 75.0,
     "antecedent_precip_7d": 20.0
   },
-  "nbs_weights": [
+  "nbs_weights": {
     "bioswale":30,
     "existing_conditions":70
-  ]
+  }
 }
 ```
     
