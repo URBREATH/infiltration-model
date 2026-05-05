@@ -2,6 +2,10 @@
 
 Provided by: **EXUS**
 
+### Contact:
+- Ettore Ettenzi: e.ettenzi@exus.ai
+- Cristina Nichiforov: c.nichiforov@exus.ai
+
 ## Description
 
 The NBS Infiltration Model provides infiltration analysis for various nature-based solutions in the Leuven area, including rain gardens, bioswales, permeable pavement, green roofs, constructed wetlands, urban forests, and infiltration trenches.
